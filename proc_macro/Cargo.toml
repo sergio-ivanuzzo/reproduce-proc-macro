@@ -1,0 +1,16 @@
+[package]
+name = "proc_macro"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "my_proc_macros_lib"
+path = "src/lib.rs"
+proc-macro = true
+
+[dependencies]
+# https://github.com/dtolnay/proc-macro-workshop#debugging-tips
+syn = { version = "*", features = ["full"] }
+quote = "*"
+proc-macro2 = "*"
+r3bl_rs_utils = "*"
